@@ -3,7 +3,7 @@ package main
 import "math"
 
 func isZero(zeros []float64) bool {
-	const zero = 1e-13
+	const zero = 1e-12
 	for i := 0; i < len(zeros); i++ {
 		if zeros[i] > zero {
 			return false
@@ -96,7 +96,7 @@ func xyCurveFitting(xyArray [][2]float64, order int) (factors []float64) {
 			matrix[i][j] = xin[i + j]
 		}
 	}
-
+	
 	// 迭代计算拟合曲线系数
 	factors = calculateFactors(matrix, order)
 
