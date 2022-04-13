@@ -6,10 +6,6 @@ import (
 	"math/rand"
 )
 
-xy := [][2]float64{
-	{}
-}
-
 // A test eaxmple
 func main() {
 	xy := make([][2]float64, 10000)
